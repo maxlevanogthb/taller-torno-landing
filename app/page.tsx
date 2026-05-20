@@ -12,7 +12,7 @@ export default function Home() {
             Taller de Torno Industrial
           </span>
           <h1 className="text-4xl md:text-5xl font-black mt-4 tracking-tight">
-            Diseño y Creación de Piezas de Precisión
+            Diseño y Creación de Piezas de Alta Precisión
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
             Catálogo digital de pernos, tornillos, arandelas y componentes industriales fabricados bajo los más altos estándares de calidad. 
