@@ -46,7 +46,21 @@ export const productos = [
 ];
 
 export const infoContacto = {
-  direccion: "Onix 153, Lomas de Satelite, 76110 Santiago de Querétaro, Qro.",
-  email: "alevano@hotmail.com", 
-  telefono: "524423695555"
+  direccion: "Calle Onix número 153, Colonia Satélite, Santiago de Querétaro, QRO, México, C.P. 76110",
+  telefonos: [
+    { numero: "4423695555", etiqueta: "Oficina Qro" },
+    { numero: "7225967837", etiqueta: "Ventas / Taller" } // Número principal para WhatsApp del catálogo
+  ],
+  correos: [
+    "maquinadosqro6@gmail.com",
+    "alevano@hotmail.com"
+  ],
+  redes: {
+    facebook: "https://www.facebook.com/profile.php?id=61556637372338", // O el enlace directo a Maquinados Industriales Qro
+    instagram: "https://www.instagram.com/maquinados977"
+  },
+  valores: {
+    slogan: "Transformamos tus ideas en piezas exactas. ¡Porque cada detalle cuenta!",
+    experiencia: "Más de 20 años de experiencia"
+  }
 };
