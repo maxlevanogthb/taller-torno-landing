@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Forzamos a que el fondo por defecto sea el gris oscuro de tus mockups */
+  --background: #121212; 
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -10,13 +11,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* --- NUEVA PALETA INDUSTRIAL PERSONALIZADA --- */
+  /* Tonos oscuros de tus diseños */
+  --color-industrialDark-900: #121212; /* Fondo principal oscuro */
+  --color-industrialDark-800: #1a1a1a; /* Tarjetas y contenedores secundarios */
+  --color-industrialDark-700: #262626; /* Bordes y separadores sutiles */
+
+  /* El naranja brillante característico de la interfaz premium */
+  --color-industrialOrange-500: #ff6b35; /* Texto destacado y hovers */
+  --color-industrialOrange-600: #e65f2b; /* Botones de acción principales */
 }
 
 body {

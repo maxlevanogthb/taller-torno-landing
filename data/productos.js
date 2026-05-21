@@ -64,3 +64,50 @@ export const infoContacto = {
     experiencia: "Más de 20 años de experiencia"
   }
 };
+
+export const matrizMateriales = {
+  aceros: ["AISI 4140", "AISI 4340", "1045 CARBON", "8620 ALLOY"],
+  noFerrosos: ["BRONZE SAE 65", "ALUMINUM 7075", "NYLATRON", "DELRIN"]
+};
+
+export const perfilesEngranes = [
+  {
+    clase: "CLASS 01",
+    tipo: "Spur",
+    descripcion: "Straight-cut teeth for high-load parallel shaft transmission. Ideal for heavy machinery."
+  },
+  {
+    clase: "CLASS 02",
+    tipo: "Helical",
+    descripcion: "Angled teeth for smoother, quieter operation and higher torque capacity than spur gears."
+  },
+  {
+    clase: "CLASS 03",
+    tipo: "Bevel",
+    descripcion: "Conical configuration for intersecting shaft power transmission at precise angles."
+  }
+];
+
+export const inventarioCritico = [
+  {
+    titulo: "Ruedas de Traslación",
+    descripcion: "Mecanizadas con tratamiento térmico de inducción para máxima resistencia al desgaste en rieles industriales. Geometría optimizada para distribución de carga pesada.",
+    detalles: ["Dureza: 55-60 HRC en pista", "Diámetros: Hasta 800mm"]
+  },
+  {
+    titulo: "Ejes de Transmisión",
+    descripcion: "Ejes de acero SAE 4340 bonificado, diseñados para resistir fatiga y torsión extrema en polipastos principales."
+  },
+  {
+    titulo: "Chumaceras",
+    descripcion: "Soportes robustos en fundición nodular o acero soldado. Tolerancias micrométricas para alineación perfecta."
+  },
+  {
+    titulo: "Rodamientos",
+    descripcion: "Rodamientos de rodillos a rótula de alta capacidad de carga dinámica, seleccionados para ambientes industriales hostiles."
+  },
+  {
+    titulo: "Bujes de Bronce",
+    descripcion: "Bujes de aleación especial SAE 64 / SAE 660, con o sin insertos de grafito sólido para autolubricación en zonas de difícil acceso."
+  }
+];
