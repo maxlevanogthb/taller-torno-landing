@@ -371,7 +371,7 @@ export default function Home() {
       </footer>
       {/* BOTÓN FLOTANTE DE WHATSAPP PARA MÓVILES */}
       <a
-        href={`https://wa.me/52${telWhatsappCat}?text=Hola,%20visto%20en%20el%20sitio%20web.%20Me%20interesa%20cotizar%20un%20maquinado.`}
+        href={`https://wa.me/52${telWhatsappCat}?text=Hola,%20vengo%20de%20su%20sitio%20web.%20Me%20interesa%20cotizar%20un%20maquinado.`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
