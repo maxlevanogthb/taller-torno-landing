@@ -369,7 +369,25 @@ export default function Home() {
           © {new Date().getFullYear()} MAQUINADOS INDUSTRIALES QRO. PRECISIÓN INDUSTRIAL. TODOS LOS DERECHOS RESERVADOS. QUERÉTARO, MÉXICO.
         </div>
       </footer>
-
+      {/* BOTÓN FLOTANTE DE WHATSAPP PARA MÓVILES */}
+      <a
+        href={`https://wa.me/52${telWhatsappCat}?text=Hola,%20visto%20en%20el%20sitio%20web.%20Me%20interesa%20cotizar%20un%20maquinado.`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+        aria-label="Contactar por WhatsApp"
+      >
+        <svg 
+          className="w-6 h-6 fill-current" 
+          viewBox="0 0 24 24"
+        >
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.458 0 9.894-4.436 9.898-9.896.002-2.645-1.022-5.13-2.885-6.994C17.204 1.85 14.716.832 12.01.832c-5.46 0-9.897 4.436-9.9 9.898-.001 1.926.499 3.81 1.447 5.429l-1.012 3.7 3.791-.995zM17.16 13.91c-.282-.141-1.666-.823-1.924-.917-.257-.094-.443-.141-.63.141-.186.281-.722.917-.885 1.102-.162.186-.326.208-.608.066-.282-.141-1.194-.44-2.275-1.405-.841-.75-1.41-1.676-1.575-1.958-.165-.282-.018-.434.123-.574.127-.127.282-.329.424-.493.142-.165.189-.282.283-.469.094-.187.047-.352-.023-.493-.07-.141-.63-1.518-.862-2.08-.227-.547-.457-.473-.63-.482-.165-.008-.353-.01-.542-.01s-.494.07-.753.352c-.259.282-.988.966-.988 2.359 0 1.393 1.012 2.735 1.153 2.923.141.187 1.992 3.042 4.83 4.266.675.292 1.202.466 1.612.596.678.215 1.294.185 1.781.112.543-.081 1.666-.681 1.901-1.34.235-.658.235-1.221.165-1.34-.07-.117-.257-.188-.54-.328z"/>
+        </svg>
+        
+        <span className="absolute right-14 bg-industrialDark-800 text-white text-[11px] font-bold font-mono px-3 py-1.5 rounded border border-industrialDark-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-xl hidden md:inline">
+          ¿Cotizar una pieza?
+        </span>
+      </a>
     </main>
   );
 }
