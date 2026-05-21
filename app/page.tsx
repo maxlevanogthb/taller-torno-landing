@@ -1,4 +1,7 @@
 // app/page.tsx
+'use client';
+
+import { useState } from 'react';
 import { 
   productos, 
   infoContacto, 
@@ -10,8 +13,21 @@ import ProductoCard from '@/components/ProductoCard';
 import Image from 'next/image';
 
 export default function Home() {
+  const [categoriaActiva, setCategoriaActiva] = useState('todas');
   // Tomamos el número de ventas/taller para el botón principal y las cotizaciones
   const telWhatsappCat = infoContacto.telefonos[1].numero;
+
+  const categorias = [
+  { id: 'todas', nombre: '⚙️ Todo el Stock' },
+  { id: 'pernos', nombre: '🖲️ Pernos' },
+  { id: 'tornillos', nombre: '🔩 Tornillos' },
+  { id: 'horquillas', nombre: '🔱 Horquillas' },
+  { id: 'arandelas', nombre: '◯ Arandelas' },
+];
+
+  const productosFiltrados = categoriaActiva === 'todas' 
+    ? productos 
+    : productos.filter(p => p.categoria === categoriaActiva);
 
   return (
     <main className="min-h-screen bg-industrialDark-900 text-slate-200 font-sans selection:bg-industrialOrange-500 selection:text-white scroll-smooth">
@@ -271,38 +287,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECCIÓN 4: CATÁLOGO DE COMPONENTES EN ESPAÑOL Y FONDO CLARO */}
+      {/* SECCIÓN 4: CATÁLOGO DE COMPONENTES CON FILTROS DINÁMICOS */}
       <section id="catalogo" className="relative px-6 py-24 bg-industrialDark-900 overflow-hidden">
-         {/* Imagen de Fondo Clara (Inventario) */}
         <div className="absolute inset-0 z-0 opacity-5">
-          <Image 
-            src="/bg/inventario-bg.png" 
-            alt="Fondo de componentes industriales" 
-            fill 
-            className="object-cover"
-          />
+          <Image src="/bg/inventario-bg.png" alt="Fondo" fill className="object-cover" />
         </div>
-         {/* Degradado para legibilidad */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-industrialDark-900 via-industrialDark-900/90 to-industrialDark-900" />
 
         <div className="relative max-w-7xl mx-auto z-10">
           <div className="mb-12 pb-4 border-b border-industrialDark-700 text-center">
             <h2 className="text-3xl font-black text-white uppercase tracking-tight">Catálogo de Componentes de Precisión</h2>
-            <p className="text-slate-400 text-xs mt-2 max-w-xl mx-auto leading-relaxed">
-              Consulte nuestra lista de piezas mecanizadas con tolerancias críticas. Seleccione cualquier artículo para solicitar una cotización técnica directa vía WhatsApp al taller en Querétaro.
+            <p className="text-slate-400 text-xs mt-2 max-w-xl mx-auto">
+              Usa los filtros de abajo para buscar por tipo de pieza. Selecciona cualquier artículo para solicitar una cotización técnica instantánea vía WhatsApp.
             </p>
           </div>
 
-          {/* Grid de Productos (Catálogo) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {productos.map((producto) => (
-              <ProductoCard 
-                key={producto.id} 
-                producto={producto} 
-                infoContacto={{ telefono: telWhatsappCat }} 
-              />
+          {/* BOTONES DE FILTRADO (TABS) */}
+          <div className="flex flex-wrap justify-center gap-2 mb-10 font-mono text-xs">
+            {categorias.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setCategoriaActiva(cat.id)}
+                className={`px-4 py-2.5 rounded font-bold uppercase tracking-wider transition-all duration-200 border ${
+                  categoriaActiva === cat.id
+                    ? 'bg-industrialOrange-600 border-industrialOrange-500 text-white shadow-lg shadow-industrialOrange-600/20'
+                    : 'bg-industrialDark-800 border-industrialDark-700 text-slate-400 hover:text-white hover:bg-industrialDark-700'
+                }`}
+              >
+                {cat.nombre}
+              </button>
             ))}
           </div>
+
+          {/* GRID DE PRODUCTOS FILTRADOS */}
+          {productosFiltrados.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {productosFiltrados.map((producto) => (
+                <ProductoCard 
+                  key={producto.id} 
+                  producto={producto} 
+                  infoContacto={{ telefono: telWhatsappCat }} 
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 text-slate-500 font-mono text-sm border border-dashed border-industrialDark-700 rounded-lg">
+              No hay piezas registradas en esta categoría actualmente.
+            </div>
+          )}
         </div>
       </section>
 
