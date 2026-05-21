@@ -1,45 +1,57 @@
 // components/ProductoCard.jsx
-import React from 'react';
+import Image from 'next/image';
 
 export default function ProductoCard({ producto, infoContacto }) {
-  const mensajeWhatsapp = `Hola! Me interesa cotizar la pieza: ${producto.nombre} ${producto.codigo ? `(Código: ${producto.codigo})` : ''}`;
-  const urlWhatsapp = `https://wa.me/${infoContacto.telefono}?text=${encodeURIComponent(mensajeWhatsapp)}`;
+  // Mensaje personalizado para el enlace de WhatsApp de cada pieza
+  const mensajeWhatsApp = encodeURIComponent(
+    `Hola, me interesa cotizar la pieza: ${producto.titulo} (Código: ${producto.codigo}) que vi en el catálogo web.`
+  );
 
   return (
-    <div className="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between p-5">
+    <div className="bg-industrialDark-800 border border-industrialDark-700 rounded-lg p-4 flex flex-col justify-between hover:border-industrialOrange-500/50 transition-all duration-300 group shadow-lg">
       <div>
-       
-        <div className="w-full h-48 bg-slate-50 rounded-lg flex items-center justify-center text-slate-400 mb-4 border border-dashed border-slate-200">
-          <span className="text-sm">FOTO DE PIEZA</span>
-        </div>
-        
-        {producto.codigo && (
-          <span className="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded">
-            {producto.codigo}
+        {/* Contenedor de la Imagen con Fondo Blanco para que tus recortes se integren perfecto */}
+        <div className="relative w-full h-44 bg-white rounded border border-industrialDark-700 overflow-hidden flex items-center justify-center p-2 mb-4">
+          <Image
+            src={producto.imagen}
+            alt={producto.titulo}
+            width={160}
+            height={160}
+            className="object-contain max-h-full transition-transform duration-300 group-hover:scale-105"
+            priority={false}
+          />
+          {/* Badge de Categoría */}
+          <span className="absolute top-2 left-2 bg-industrialDark-900/90 text-[9px] font-mono font-bold text-industrialOrange-500 px-2 py-0.5 rounded border border-industrialDark-700 uppercase">
+            {producto.categoria}
           </span>
-        )}
-        
-        <h3 className="font-semibold text-slate-800 text-lg mt-2 min-h-[56px] line-clamp-2">
-          {producto.nombre}
+        </div>
+
+        {/* Datos Técnicos de la Refacción */}
+        <span className="text-[10px] font-mono text-slate-500 block">CÓD: {producto.codigo}</span>
+        <h3 className="text-sm font-black text-white uppercase tracking-tight mt-1 group-hover:text-industrialOrange-400 transition-colors">
+          {producto.titulo}
         </h3>
-        
-        <p className="text-xs text-slate-400 uppercase tracking-wider mt-1">
-          {producto.categoria}
+        <p className="text-slate-400 text-[11px] mt-2 leading-relaxed min-h-8">
+          {producto.descripcion}
         </p>
       </div>
 
-      <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-        <span className="text-xl font-bold text-slate-900">
-          ${producto.precio.toFixed(2)}
-        </span>
+      {/* Precio y Botón de Cotización */}
+      <div className="mt-4 pt-3 border-t border-industrialDark-700 flex items-center justify-between">
+        <div>
+          <span className="text-[9px] font-mono text-slate-600 block uppercase">Precio Lista</span>
+          <span className="text-sm font-mono font-bold text-emerald-400">
+            ${producto.precio.toFixed(2)} <span className="text-[9px] text-slate-500">MXN</span>
+          </span>
+        </div>
         
         <a
-          href={urlWhatsapp}
+          href={`https://wa.me/52${infoContacto.telefono}?text=${mensajeWhatsApp}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors flex items-center gap-2"
+          className="bg-industrialDark-900 hover:bg-industrialOrange-600 text-slate-300 hover:text-white font-mono font-bold px-3 py-2 rounded text-[10px] uppercase tracking-wider transition-all duration-200 border border-industrialDark-700 hover:border-industrialOrange-500"
         >
-          Cotizar
+          Cotizar 📱
         </a>
       </div>
     </div>
