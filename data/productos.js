@@ -80,6 +80,141 @@ export const productos = [
     categoria: "tornillos",
     imagen: "/productos/1494400.png",
     descripcion: "Tornillo fusible con sección de corte calculada para protección mecánica de arados."
+  },
+  {
+    id: "921598",
+    codigo: "921598",
+    titulo: "Exéntrico Tornillo Fusible RA 401",
+    precio: 52.85,
+    categoria: "tornillos",
+    imagen: "/productos/921598.png",
+    descripcion: "Buje exéntrico maquinado para acoplamiento de tornillo fusible."
+  },
+  {
+    id: "2731089",
+    codigo: "2731089",
+    titulo: "Tornillo Tuerca Porta Cuchilla",
+    precio: 80.26,
+    categoria: "tornillos",
+    imagen: "/productos/2731089.png",
+    descripcion: "Tornillo de alta resistencia con tuerca para fijación en sistemas porta cuchilla."
+  },
+  {
+    id: "C5NN3N450A",
+    codigo: "C5NN3N450A",
+    titulo: "Arandela Perno Chico RA 382 ARA",
+    precio: 39.49,
+    categoria: "arandelas",
+    imagen: "/productos/C5NN3N450A.png",
+    descripcion: "Arandela plana tropicalizada para perno chico en ensambles agrícolas."
+  },
+  {
+    id: "EFITZQ479AA",
+    codigo: "EFITZQ479AA",
+    titulo: "Perno Enganche de Brazos RA-372",
+    precio: 165.63,
+    categoria: "pernos",
+    imagen: "/productos/EFITZQ479AA.png",
+    descripcion: "Perno de enganche con tope en escuadra para sistemas de brazos de tiro."
+  },
+  {
+    id: "2731088",
+    codigo: "2731088",
+    titulo: "Cuchilla para Desvaradora",
+    precio: 356.74,
+    categoria: "cuchillas",
+    imagen: "/productos/2731088.png",
+    descripcion: "Cuchilla de acero templado de alta resistencia al impacto para desvaradora industrial."
+  },
+  {
+    id: "1672622",
+    codigo: "1672622",
+    titulo: "Palanca del Hidráulico RA-392",
+    precio: 89.18,
+    categoria: "componentes",
+    imagen: "/productos/1672622.png",
+    descripcion: "Palanca de accionamiento forjada con ojo de articulación para sistema hidráulico."
+  },
+  {
+    id: "ford-ra-400v",
+    codigo: "FORD RA-400V",
+    titulo: "Tornillo Pivote Cilindro de Dirección",
+    precio: 121.04,
+    categoria: "tornillos",
+    imagen: "/productos/ford-ra-400v.png",
+    descripcion: "Pivote roscado de doble extremo para acoplamiento en cilindros de dirección Ford."
+  },
+  {
+    id: "46789",
+    codigo: "46789",
+    titulo: "Perno Cilíndrico Liso",
+    precio: 38.22,
+    categoria: "pernos",
+    imagen: "/productos/46789.png",
+    descripcion: "Perno cilíndrico liso de acero endurecido con perforación para chaveta de seguridad."
+  },
+  {
+    id: "58075",
+    codigo: "58075",
+    titulo: "Laina de Ajuste",
+    precio: 127.40,
+    categoria: "lainas",
+    imagen: "/productos/58075.png",
+    descripcion: "Laina de calibración o cuña de acero para alineación de holguras mecánicas."
+  },
+  {
+    id: "58076",
+    codigo: "58076",
+    titulo: "Laina de Calibración Especial",
+    precio: 50.96,
+    categoria: "lainas",
+    imagen: "/productos/58076.png",
+    descripcion: "Laina curva de precisión para ajuste de holguras mecánicas y alineación de componentes."
+  },
+  {
+    id: "128458",
+    codigo: "128458",
+    titulo: "Tapa Balero Aguja Alambre",
+    precio: 171.76,
+    categoria: "componentes",
+    imagen: "/productos/128458.png",
+    descripcion: "Tapa protectora maquinada con perfil agudo para balero de agujas."
+  },
+  {
+    id: "128535",
+    codigo: "128535",
+    titulo: "Placa de Sujeción Doble Ranura",
+    precio: 38.22,
+    categoria: "componentes",
+    imagen: "/productos/128535.png",
+    descripcion: "Placa base de acero con dos ranuras ovaladas para montaje ajustable de alta resistencia."
+  },
+  {
+    id: "180444",
+    codigo: "180444",
+    titulo: "Perno Caja Transmisión 285",
+    precio: 81.54,
+    categoria: "pernos",
+    imagen: "/productos/180444.png",
+    descripcion: "Perno cilíndrico de alta dureza para ensamble en cajas de transmisión serie 285."
+  },
+  {
+    id: "1805744M91",
+    codigo: "1805744M91",
+    titulo: "Módulo Sector de Dirección DVQ975",
+    precio: 76.44,
+    categoria: "componentes",
+    imagen: "/productos/1805744M91.png",
+    descripcion: "Componente cilíndrico endurecido para acoplamiento en sectores de dirección hidráulica."
+  },
+  {
+    id: "1861676",
+    codigo: "1861676",
+    titulo: "Horquilla de Frenos 265/285",
+    precio: 77.87,
+    categoria: "horquillas",
+    imagen: "/productos/1861676.png",
+    descripcion: "Horquilla de frenos reforzada con vástago roscado de alta resistencia al impacto."
   }
 ];
 
@@ -100,7 +235,8 @@ export const infoContacto = {
   valores: {
     slogan: "Transformamos tus ideas en piezas exactas. ¡Porque cada detalle cuenta!",
     experiencia: "Más de 20 años de experiencia"
-  }
+  },
+  
 };
 
 export const matrizMateriales = {

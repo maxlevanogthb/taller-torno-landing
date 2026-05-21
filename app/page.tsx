@@ -18,13 +18,14 @@ export default function Home() {
   const telWhatsappCat = infoContacto.telefonos[1].numero;
 
   const categorias = [
-  { id: 'todas', nombre: '⚙️ Todo el Stock' },
-  { id: 'pernos', nombre: '🖲️ Pernos' },
-  { id: 'tornillos', nombre: '🔩 Tornillos' },
-  { id: 'horquillas', nombre: '🔱 Horquillas' },
-  { id: 'arandelas', nombre: '◯ Arandelas' },
-];
-
+    { id: 'todas', nombre: '⚙️ Todo el Stock' },
+    { id: 'pernos', nombre: '🖲️ Pernos' },
+    { id: 'tornillos', nombre: '🔩 Tornillos' },
+    { id: 'cuchillas', nombre: '⚔️ Cuchillas' },
+    { id: 'lainas', nombre: '📏 Lainas' },
+    { id: 'horquillas', nombre: '🔱 Horquillas' },
+    { id: 'arandelas', nombre: '◯ Arandelas' },
+  ];
   const productosFiltrados = categoriaActiva === 'todas' 
     ? productos 
     : productos.filter(p => p.categoria === categoriaActiva);
