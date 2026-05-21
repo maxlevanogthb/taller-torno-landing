@@ -66,25 +66,25 @@ export const infoContacto = {
 };
 
 export const matrizMateriales = {
-  aceros: ["AISI 4140", "AISI 4340", "1045 CARBON", "8620 ALLOY"],
-  noFerrosos: ["BRONZE SAE 65", "ALUMINUM 7075", "NYLATRON", "DELRIN"]
+  aceros: ["AISI 4140", "AISI 4340", "1045 CARBÓN", "8620 ALEACIÓN"],
+  noFerrosos: ["BRONCE SAE 65", "ALUMINIO 7075", "NYLATRON", "DELRIN"]
 };
 
 export const perfilesEngranes = [
   {
-    clase: "CLASS 01",
-    tipo: "Spur",
-    descripcion: "Straight-cut teeth for high-load parallel shaft transmission. Ideal for heavy machinery."
+    clase: "TIPO 01",
+    tipo: "Rectos (Spur)",
+    descripcion: "Dientes de corte recto para transmisión de alta carga en ejes paralelos. Ideal para maquinaria pesada."
   },
   {
-    clase: "CLASS 02",
-    tipo: "Helical",
-    descripcion: "Angled teeth for smoother, quieter operation and higher torque capacity than spur gears."
+    clase: "TIPO 02",
+    tipo: "Helicoidales",
+    descripcion: "Dientes angulados para una operación más suave y silenciosa, con mayor capacidad de torque que los engranes rectos."
   },
   {
-    clase: "CLASS 03",
-    tipo: "Bevel",
-    descripcion: "Conical configuration for intersecting shaft power transmission at precise angles."
+    clase: "TIPO 03",
+    tipo: "Cónicos (Bevel)",
+    descripcion: "Configuración cónica para la transmisión de potencia en ejes que se intersectan a ángulos precisos."
   }
 ];
 

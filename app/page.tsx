@@ -198,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECCIÓN 3: MATRIZ TÉCNICA Y ENGRANES CON FONDO DE ENGRANES */}
+      {/* SECCIÓN 3: MATRIZ TÉCNICA Y ENGRANES TRADUCIDA */}
       <section id="materiales" className="relative max-w-7xl mx-auto px-6 py-24 border-b border-industrialDark-700">
         <div className="mb-10 font-mono text-center">
           <p className="text-[10px] font-bold text-industrialOrange-500 uppercase tracking-widest">Matriz de Especificaciones</p>
@@ -207,9 +207,10 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-          {/* Perfiles de Engranajes CON FONDO DE ENGRANES */}
+          
+          {/* Perfiles de Engranajes (Sin las referencias CONFUSAS de fabricación) */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4 relative">
-             {/* Imagen de Fondo (Engranes precisión) */}
+            {/* Imagen de Fondo (Engranes precisión) */}
             <div className="absolute inset-0 z-0 opacity-5 -m-6">
               <Image 
                 src="/bg/engranes-bg.png" 
@@ -222,20 +223,18 @@ export default function Home() {
             {perfilesEngranes.map((engrane, idx) => (
               <div key={idx} className="bg-industrialDark-800/80 backdrop-blur-sm border border-industrialDark-700 p-5 rounded-lg flex flex-col justify-between relative z-10">
                 <div>
-                  <span className="text-[9px] font-mono text-slate-500 block">{engrane.clase}</span>
+                  <span className="text-[9px] font-mono text-industrialOrange-500 font-bold block">{engrane.clase}</span>
                   <h3 className="text-base font-black text-white uppercase mt-1 tracking-tight">{engrane.tipo}</h3>
                   <p className="text-slate-400 text-[11px] mt-2 leading-relaxed">
                     {engrane.descripcion}
                   </p>
                 </div>
-                <div className="text-[9px] font-mono text-slate-600 mt-4 pt-2 border-t border-industrialDark-700/50">
-                  REF_FABRICACIÓN: ENG_0{idx+1}
-                </div>
+                {/* Se eliminó la línea de REF_FABRICACIÓN para limpiar la tarjeta */}
               </div>
             ))}
           </div>
 
-          {/* Matriz de Materiales Aprobados */}
+          {/* Matriz de Materiales Aprobados en Español */}
           <div className="lg:col-span-5 bg-industrialDark-800 border border-industrialDark-700 p-6 rounded-lg font-mono">
             <h3 className="text-xs font-bold text-industrialOrange-500 uppercase tracking-widest flex items-center gap-2">
               🔬 Materiales Certificados
@@ -268,6 +267,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
