@@ -222,7 +222,7 @@ export const infoContacto = {
   direccion: "Calle Onix número 153, Colonia Satélite, Santiago de Querétaro, QRO, México, C.P. 76110",
   telefonos: [
     { numero: "4423695555", etiqueta: "Oficina Qro" },
-    { numero: "7225967837", etiqueta: "Ventas / Taller" } // Número principal para WhatsApp del catálogo
+    { numero: "4423695555", etiqueta: "Ventas / Taller" } // Número principal para WhatsApp del catálogo
   ],
   correos: [
     "maquinadosqro6@gmail.com",
