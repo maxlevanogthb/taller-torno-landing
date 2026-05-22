@@ -288,6 +288,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECCIÓN DE SOLDADURA INDUSTRIAL */}
+      <section id="soldadura" className="relative max-w-7xl mx-auto px-6 py-24 border-b border-industrialDark-700">
+        <div className="mb-12 text-center">
+          <p className="text-[10px] font-bold text-industrialOrange-500 uppercase tracking-widest font-mono">Unión y Recuperación de Metales</p>
+          <h2 className="text-3xl font-black text-white uppercase tracking-tight mt-2">Soldadura Industrial y Especializada</h2>
+          <p className="text-sm text-slate-400 mt-3 max-w-2xl mx-auto">
+            Complementamos nuestros maquinados con servicios de soldadura general y de alta precisión. Garantizamos la integridad estructural, hermeticidad y estética de sus componentes, adaptando el proceso térmico a las exigencias químicas de cada material.
+          </p>
+        </div>
+
+        {/* Grid de Procesos de Soldadura */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 mb-10">
+          
+          {/* Tarjeta TIG */}
+          <div className="bg-industrialDark-800/80 backdrop-blur-sm border border-industrialDark-700 p-6 rounded-lg hover:border-industrialOrange-500/50 transition-all duration-300 group">
+            <h3 className="text-base font-black text-white uppercase tracking-tight mb-2 flex items-center gap-2 group-hover:text-industrialOrange-400 transition-colors">
+              <span className="text-industrialOrange-500 text-xl">⚡</span> Proceso TIG <span className="text-[10px] text-slate-500 font-mono">(GTAW)</span>
+            </h3>
+            <p className="text-[12px] text-slate-400 leading-relaxed">
+              Soldadura de tungsteno con gas argón de alta pureza. Ofrece precisión milimétrica y cordones estéticos libres de escoria. Es el proceso definitivo para uniones críticas de grado alimenticio, farmacéutico o piezas con tolerancias de deformación térmica estrictas.
+            </p>
+          </div>
+
+          {/* Tarjeta MIG */}
+          <div className="bg-industrialDark-800/80 backdrop-blur-sm border border-industrialDark-700 p-6 rounded-lg hover:border-industrialOrange-500/50 transition-all duration-300 group">
+            <h3 className="text-base font-black text-white uppercase tracking-tight mb-2 flex items-center gap-2 group-hover:text-industrialOrange-400 transition-colors">
+              <span className="text-industrialOrange-500 text-xl">🔥</span> Proceso MIG <span className="text-[10px] text-slate-500 font-mono">(GMAW)</span>
+            </h3>
+            <p className="text-[12px] text-slate-400 leading-relaxed">
+              Sistema de microalambre con gas inerte que asegura una alta tasa de depósito y penetración profunda. Ideal para la fabricación de estructuras robustas, pailería pesada y ensambles de producción continua que requieren máxima resistencia a la tracción.
+            </p>
+          </div>
+
+          {/* Tarjeta Electrodo */}
+          <div className="bg-industrialDark-800/80 backdrop-blur-sm border border-industrialDark-700 p-6 rounded-lg hover:border-industrialOrange-500/50 transition-all duration-300 group">
+            <h3 className="text-base font-black text-white uppercase tracking-tight mb-2 flex items-center gap-2 group-hover:text-industrialOrange-400 transition-colors">
+              <span className="text-industrialOrange-500 text-xl">💥</span> Electrodo <span className="text-[10px] text-slate-500 font-mono">(SMAW)</span>
+            </h3>
+            <p className="text-[12px] text-slate-400 leading-relaxed">
+              Soldadura de arco manual con electrodo revestido. Máxima versatilidad para trabajos de mantenimiento pesado, reparaciones de campo y recuperación de piezas con desgaste. Excelente comportamiento sobre metales con óxido o en condiciones industriales severas.
+            </p>
+          </div>
+
+        </div>
+
+        {/* Matriz de Materiales de Soldadura */}
+        <div className="bg-industrialDark-900 border border-industrialDark-700 p-5 rounded-lg flex flex-col md:flex-row items-center justify-between gap-4 font-mono">
+          <span className="text-[11px] font-bold text-slate-300 uppercase tracking-widest">
+            Materiales que Soldamos:
+          </span>
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="px-3 py-1.5 border border-industrialDark-600 bg-industrialDark-800 text-slate-300 text-[10px] font-bold rounded shadow-sm">
+              ACERO INOXIDABLE
+            </span>
+            <span className="px-3 py-1.5 border border-industrialDark-600 bg-industrialDark-800 text-slate-300 text-[10px] font-bold rounded shadow-sm">
+              ACERO AL CARBÓN
+            </span>
+            <span className="px-3 py-1.5 border border-industrialDark-600 bg-industrialDark-800 text-slate-300 text-[10px] font-bold rounded shadow-sm">
+              ALUMINIO
+            </span>
+            <span className="px-3 py-1.5 border border-industrialDark-600 bg-industrialDark-800 text-slate-300 text-[10px] font-bold rounded shadow-sm">
+              FUNDICIÓN / FIERRO VACIADO
+            </span>
+          </div>
+        </div>
+      </section>
+
       {/* SECCIÓN 4: CATÁLOGO DE COMPONENTES CON FILTROS DINÁMICOS */}
       <section id="catalogo" className="relative px-6 py-24 bg-industrialDark-900 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-5">
@@ -296,7 +363,7 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto z-10">
           <div className="mb-12 pb-4 border-b border-industrialDark-700 text-center">
-            <h2 className="text-3xl font-black text-white uppercase tracking-tight">Catálogo de Componentes de Precisión</h2>
+            <h2 className="text-3xl font-black text-white uppercase tracking-tight">Catálogo de Refacciones Agricolas</h2>
             <p className="text-slate-400 text-xs mt-2 max-w-xl mx-auto">
               Usa los filtros de abajo para buscar por tipo de pieza. Selecciona cualquier artículo para solicitar una cotización técnica instantánea vía WhatsApp.
             </p>
